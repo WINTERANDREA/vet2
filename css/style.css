@@ -2008,7 +2008,10 @@ figure figcaption {
   #faq-section .col-lg-6 {
     text-align: center; }
   .about-text {
-    text-align: center !important; } }
+    text-align: center !important; }
+  .about-text p.text-muted,
+  .about-text ul {
+    text-align: left !important; } }
 
 @media (max-width: 768px) {
   .video {

@@ -1982,6 +1982,12 @@ figure figcaption {
   width: 350px;
   height: 350px; }
 
+.text-primary {
+  color: #0F9AFF !important; }
+
+.blog-entry-text a {
+  color: #0f9bff8f; }
+
 .bg-primary2 {
   background-color: #0F9AFF; }
 
@@ -2000,7 +2006,9 @@ figure figcaption {
 
 @media (max-width: 992px) {
   #faq-section .col-lg-6 {
-    text-align: center; } }
+    text-align: center; }
+  .about-text {
+    text-align: center !important; } }
 
 @media (max-width: 768px) {
   .video {

@@ -1988,7 +1988,8 @@ figure figcaption {
   width: 30px;
   height: 30px;
   animation: pulsate 2s infinite;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
 
 @keyframes pulsate {
   0% {
@@ -2067,7 +2068,9 @@ figure figcaption {
     left: 88%; }
   .logo-whatsapp {
     width: 33px;
-    height: 33px; } }
+    height: 33px;
+    cursor: pointer;
+    outline: none; } }
 
 @media (max-width: 465px) {
   .intro-text h1 {

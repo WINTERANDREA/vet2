@@ -2228,7 +2228,7 @@ figure figcaption {
   .intro-text p {
     font-size: 1.4rem; }
   .arrow {
-    bottom: 20%; } }
+    bottom: 15%; } }
 
 @media (max-width: 391px) {
   .intro-text h1 {

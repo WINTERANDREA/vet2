@@ -120,11 +120,11 @@ body:after {
       font-size: 3rem; } }
 
 .site-footer {
-  padding: 4em 0 2em 0;
+  padding: 4em 0 1em 0;
   background: #333333; }
   @media (min-width: 768px) {
     .site-footer {
-      padding: 8em 0 2em 0; } }
+      padding: 4em 0 1em 0; } }
   .site-footer .border-top {
     border-top: 1px solid rgba(255, 255, 255, 0.1) !important; }
   .site-footer p {
@@ -2058,6 +2058,9 @@ figure figcaption {
   cursor: pointer;
   outline: none; }
 
+.copyright {
+  margin-bottom: 0 !important; }
+
 @keyframes pulsate {
   0% {
     transform: scale(0.95); }
@@ -2092,17 +2095,66 @@ figure figcaption {
   background-color: #0f9aff; }
 
 .mappa {
-  width: 80%;
-  height: 300px;
-  padding-bottom: 20px; }
+  width: 100%;
+  height: 100%; }
+
+@media (max-width: 991px) {
+  .mappa {
+    height: 300px; } }
 
 .tel-footer {
   text-decoration: none;
-  color: #a8b1b8; }
+  color: #FFF;
+  font-weight: bold; }
+
+.address-footer {
+  text-decoration: none;
+  color: #FFF;
+  font-weight: bold;
+  padding-bottom: 40px; }
 
 .tel-footer:hover {
   cursor: pointer !important;
-  color: #c4cacf; }
+  color: white; }
+
+/* FOOTER */
+.footer-heading {
+  color: #0f9aff !important; }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr .5fr; }
+
+.footer-grid p {
+  line-height: 1rem;
+  margin-bottom: 10px;
+  color: #fff; }
+
+.footer-grid a:hover p {
+  color: #95cff8; }
+
+.footer-grid-sub:not(:last-of-type) {
+  padding-right: 90px; }
+
+.footer-title-logo {
+  width: 100%; }
+
+.footer-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  transform: translateX(5%); }
+
+.footer-logo {
+  width: 60px;
+  height: 60px;
+  transform: translateX(120%);
+  margin-bottom: 20px; }
+
+.site-footer a {
+  color: #fff; }
+
+.site-footer a:hover {
+  color: #95cff8; }
 
 @media (max-width: 992px) {
   #faq-section .col-lg-6 {
@@ -2113,14 +2165,24 @@ figure figcaption {
   .about-text ul {
     text-align: left !important; } }
 
+@media (max-width: 991px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    margin-bottom: 1rem; }
+  .footer-grid-sub {
+    padding-right: 0px !important; } }
+
 @media (max-width: 768px) {
   .video {
     width: 250px;
-    height: 250px; } }
-
-@media (max-width: 768px) {
+    height: 250px; }
   .icon-service {
     text-align: center; } }
+
+@media (max-width: 767px) {
+  .footer-grid p {
+    font-size: .8rem; } }
 
 @media only screen and (max-width: 1200px) {
   .hidden {
@@ -2139,16 +2201,34 @@ figure figcaption {
     bottom: 10px;
     right: 10px; }
   .logo-whatsapp {
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     outline: none; } }
+
+@media (max-width: 487px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin-bottom: 1rem;
+    justify-items: center; }
+  .footer-grid-sub:nth-of-type(2) {
+    margin-left: 20px; }
+  .footer-grid-sub:nth-of-type(3) {
+    margin-left: -43px; }
+  .footer-grid-sub:nth-of-type(4) {
+    margin-left: -68px; } }
 
 @media (max-width: 465px) {
   .intro-text h1 {
     font-size: 1.8rem; }
   .intro-text p {
-    font-size: 1.4rem; } }
+    font-size: 1.4rem; }
+  .arrow {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-65%); } }
 
 @media (max-width: 391px) {
   .intro-text h1 {

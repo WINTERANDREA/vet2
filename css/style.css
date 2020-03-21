@@ -2046,13 +2046,14 @@ figure figcaption {
   position: absolute;
   bottom: 3%;
   left: 50%;
-  transform: translateX(-65%); }
+  transform: translateX(-65%);
+  z-index: 1000; }
 
 .arrow ul {
   list-style: none; }
 
 .logo-arrow {
-  width: 30px;
+  width: 50px;
   height: 30px;
   animation: pulsate 2s infinite;
   cursor: pointer;
@@ -2182,7 +2183,9 @@ figure figcaption {
 
 @media (max-width: 767px) {
   .footer-grid p {
-    font-size: .8rem; } }
+    font-size: .8rem; }
+  .arrow {
+    bottom: 15%; } }
 
 @media only screen and (max-width: 1200px) {
   .hidden {
@@ -2225,10 +2228,7 @@ figure figcaption {
   .intro-text p {
     font-size: 1.4rem; }
   .arrow {
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    transform: translateX(-65%); } }
+    bottom: 20%; } }
 
 @media (max-width: 391px) {
   .intro-text h1 {

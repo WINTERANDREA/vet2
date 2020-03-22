@@ -82,6 +82,17 @@ body:after {
     .btn.btn-primary.btn-black--hover:hover {
       background: #666666;
       color: #fff; }
+  .btn.btn-primary-w {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)) !important;
+    border-color: none;
+    color: #405a58; }
+    .btn.btn-primary-w:hover {
+      background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)) !important;
+      border-color: none;
+      color: #405a58; }
+    .btn.btn-primary-w.btn-black--hover:hover {
+      background: #666666;
+      color: #fff; }
 
 .line-height-1 {
   line-height: 1 !important; }
@@ -1827,24 +1838,29 @@ figure figcaption {
   .trainers .heading, .bg-primary .heading {
     color: #405a58; }
 
+.trainer img:hover {
+  transform: scale(1.1);
+  transition: .3s ease-in-out; }
+
 .trainer figure {
-  margin-bottom: 50px;
-  position: relative; }
-  .trainer figure:before {
-    transition: .3s all ease-in-out;
-    content: "";
-    background: #405a58;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1; }
+  margin-bottom: 30px;
+  /* position: relative;
+		&:before {
+			transition: .3s all ease-in-out;
+			content: "";
+			background: #405a58;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+		} */ }
 
 .trainer:hover figure:before {
-  top: 10px;
-  left: 10px;
-  background: #405a58; }
+  /* top: 10px;
+				left: 10px;
+				background: #405a58; */ }
 
 .trainer h3 {
   font-size: 1.3rem;
@@ -2086,6 +2102,9 @@ figure figcaption {
 .text-primary {
   color: #0F9AFF !important; }
 
+.text-esperti {
+  color: #405a58 !important; }
+
 .blog-entry-text a {
   color: #0f9bff8f; }
 
@@ -2114,6 +2133,13 @@ figure figcaption {
 .tel-footer:hover {
   cursor: pointer !important;
   color: white; }
+
+.img-fluid-round {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top; }
 
 /* FOOTER */
 .footer-heading {
@@ -2185,7 +2211,9 @@ figure figcaption {
   .footer-grid p {
     font-size: .8rem; }
   .arrow {
-    bottom: 15%; } }
+    bottom: 15%; }
+  .trainer {
+    margin-bottom: 50px; } }
 
 @media only screen and (max-width: 1200px) {
   .hidden {

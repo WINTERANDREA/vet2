@@ -704,13 +704,13 @@ body:after {
   background: #ccc; }
 
 .bg-image-home {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent), url(../images/cane-gatto.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent), url(../images/home/cane-gatto.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
 
 @media only screen and (max-width: 600px) {
   .bg-image-home {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent), url(../images/cane-gatto-low.jpg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent), url(../images/home/cane-gatto-low.jpg);
     background-repeat: no-repeat;
     background-size: cover; } }
 

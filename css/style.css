@@ -2150,7 +2150,8 @@ figure figcaption {
 
 .img-fluid-3 {
   max-height: 400px !important;
-  object-fit: cover !important; }
+  object-fit: cover !important;
+  object-position: center !important; }
 
 /* FOOTER */
 .footer-heading {

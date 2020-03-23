@@ -2149,7 +2149,8 @@ figure figcaption {
   object-position: top; }
 
 .img-fluid-3 {
-  max-height: 400px !important; }
+  max-height: 400px !important;
+  object-fit: contain; }
 
 /* FOOTER */
 .footer-heading {

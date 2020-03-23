@@ -2028,6 +2028,10 @@ figure figcaption {
   .read-more-state.two:checked ~ h2.text-black {
     margin-top: 30px; } }
 
+.icon-globe {
+  background: #0f9aff !important;
+  color: white !important; }
+
 .read-more-trigger {
   cursor: pointer; }
 

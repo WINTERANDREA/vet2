@@ -1750,8 +1750,7 @@ figure figcaption {
 
 /* New For Dogger */
 .heading-section h2 {
-  text-transform: uppercase;
-  font-weight: 900; }
+  font-weight: 400; }
 
 .hover-1-wrap .hover-1 {
   position: relative;

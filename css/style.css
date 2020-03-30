@@ -1825,7 +1825,10 @@ figure figcaption {
     color: #fff; }
 
 .block_service {
-  text-align: center; }
+  text-align: left; }
+  @media (max-width: 767px) {
+    .block_service {
+      text-align: center; } }
   .block_service img {
     max-width: 100px;
     margin-bottom: 30px; }
@@ -1834,7 +1837,6 @@ figure figcaption {
     margin-bottom: 1rem;
     color: #000; }
   .block_service p {
-    text-align: left;
     line-height: 1.5; }
 
 .trainers, .bg-primary {
@@ -2236,7 +2238,7 @@ figure figcaption {
     text-align: center !important; }
   .about-text p.text-muted,
   .about-text ul {
-    text-align: left !important; } }
+    text-align: justify !important; } }
 
 @media (max-width: 991px) {
   .footer-grid {
@@ -2264,8 +2266,6 @@ figure figcaption {
   .trainer {
     margin-bottom: 50px;
     text-align: center; }
-  .text-esperti {
-    text-align: left; }
   .website {
     display: inline-block;
     margin-left: 15px; } }

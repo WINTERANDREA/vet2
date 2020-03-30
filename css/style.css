@@ -375,7 +375,8 @@ body:after {
           min-width: 210px; }
           .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a {
             padding: 9px 20px;
-            display: block; }
+            display: block;
+            font-size: 16px; }
             .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a:hover {
               background: #eff1f3;
               color: #000; }
@@ -1823,14 +1824,18 @@ figure figcaption {
   .address li span {
     color: #fff; }
 
-.block_service img {
-  max-width: 100px;
-  margin-bottom: 30px; }
-
-.block_service h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: #000; }
+.block_service {
+  text-align: center; }
+  .block_service img {
+    max-width: 100px;
+    margin-bottom: 30px; }
+  .block_service h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #000; }
+  .block_service p {
+    text-align: left;
+    line-height: 1.5; }
 
 .trainers, .bg-primary {
   color: #567876; }
@@ -2029,7 +2034,30 @@ figure figcaption {
 
 .icon-globe {
   background: #0f9aff !important;
-  color: white !important; }
+  color: #95cff8 !important; }
+
+.icon-globe2 {
+  width: 20px;
+  opacity: 0.4;
+  justify-self: right;
+  margin-right: 6px; }
+
+.website {
+  display: block;
+  padding-top: 20px; }
+
+.website a {
+  display: grid;
+  grid-template-columns: 30px 90px;
+  align-items: center; }
+
+.website a p {
+  color: #95cff8 !important;
+  margin-bottom: 0 !important;
+  justify-self: left; }
+
+.website a:hover p {
+  color: #fff !important; }
 
 .read-more-trigger {
   cursor: pointer; }
@@ -2156,6 +2184,12 @@ figure figcaption {
   object-fit: cover !important;
   object-position: center !important; }
 
+.virginia {
+  color: #95cff8; }
+
+.virginia:hover {
+  color: #fff; }
+
 /* FOOTER */
 .footer-heading {
   color: #0f9aff !important; }
@@ -2229,7 +2263,12 @@ figure figcaption {
     bottom: 15%; }
   .trainer {
     margin-bottom: 50px;
-    text-align: center; } }
+    text-align: center; }
+  .text-esperti {
+    text-align: left; }
+  .website {
+    display: inline-block;
+    margin-left: 15px; } }
 
 @media only screen and (max-width: 1200px) {
   .hidden {

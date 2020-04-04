@@ -2301,7 +2301,7 @@ figure figcaption {
   .footer-grid-sub:nth-of-type(2) {
     margin-left: 20px; }
   .footer-grid-sub:nth-of-type(3) {
-    margin-left: -43px; }
+    margin-left: 27px; }
   .footer-grid-sub:nth-of-type(4) {
     margin-left: -68px; } }
 
@@ -2324,17 +2324,11 @@ figure figcaption {
 
 /* Blog */
 .bg-image-home2 {
-  background-image: linear-gradient(to top, rgba(75, 163, 235, 0.7), transparent), url(../images/blog/vet-blog.jpg);
+  background-image: linear-gradient(to bottom, rgba(75, 163, 235, 0.7), transparent), url(../images/blog/vet-blog.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   max-height: 400px !important; }
-
-@media only screen and (max-width: 600px) {
-  .bg-image-home2 {
-    background-image: linear-gradient(to bottom, rgba(75, 163, 235, 0.8), transparent), url(../images/blog/vet-blog.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; } }
 
 h2.vet-blog {
   font-family: 'Dancing Script', cursive !important;
@@ -2347,3 +2341,17 @@ h2.vet-blog {
 .site-blocks-cover2 > .container > .row {
   height: calc(80vh) !important;
   min-height: 400px !important; }
+
+@media only screen and (max-width: 600px) {
+  .bg-image-home2 {
+    background-image: linear-gradient(to bottom, rgba(75, 163, 235, 0.8), transparent), url(../images/blog/vet-blog.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .post-p {
+    font-size: 1.3rem !important; } }
+
+@media only screen and (max-width: 400px) {
+  .post-p {
+    font-size: 16px !important;
+    color: #0f9aff !important;
+    font-weight: bold !important; } }

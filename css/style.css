@@ -2321,3 +2321,29 @@ figure figcaption {
     font-size: 1.7rem; }
   .intro-text p {
     font-size: 1.3rem; } }
+
+/* Blog */
+.bg-image-home2 {
+  background-image: linear-gradient(to top, rgba(75, 163, 235, 0.7), transparent), url(../images/blog/vet-blog.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-height: 400px !important; }
+
+@media only screen and (max-width: 600px) {
+  .bg-image-home2 {
+    background-image: linear-gradient(to bottom, rgba(75, 163, 235, 0.8), transparent), url(../images/blog/vet-blog.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; } }
+
+h2.vet-blog {
+  font-family: 'Dancing Script', cursive !important;
+  font-size: 4rem; }
+
+.site-blocks-cover2 {
+  min-height: 400px !important;
+  height: calc(20vh) !important; }
+
+.site-blocks-cover2 > .container > .row {
+  height: calc(80vh) !important;
+  min-height: 400px !important; }

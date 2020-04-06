@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
 			$('.site-mobile-menu .has-children').each(function () {
 				var $this = $(this);
 
-				$this.prepend('<span class="arrow-collapse collapsed">');
+				$this.prepend('<span class="arrow-collapse active">');
 
 				$this.find('.arrow-collapse').attr({
 					'data-toggle': 'collapse',

@@ -2333,6 +2333,11 @@ figure figcaption {
   background-position: center;
   max-height: 400px !important; }
 
+#blog-section {
+  background-image: linear-gradient(to top, rgba(15, 154, 255, 0), transparent), url(/images//icone_custom/orme.png);
+  background-repeat: repeat;
+  background-size: 100px; }
+
 h2.vet-blog {
   font-family: 'Dancing Script', cursive !important;
   font-size: 6rem;
@@ -2353,6 +2358,22 @@ h2.vet-blog {
   margin-bottom: 16px;
   margin-left: 5px; }
 
+.blog-img-head {
+  background-size: cover; }
+
+.blog-img-head img {
+  height: 300px; }
+
+.blog-entry {
+  background-color: aliceblue; }
+
+.blog-entry-text {
+  align-self: center;
+  padding-right: 10px; }
+
+.btn-blog {
+  padding: 5px 10px; }
+
 .site-blocks-cover2 {
   min-height: 400px !important;
   height: calc(20vh) !important; }
@@ -2360,6 +2381,16 @@ h2.vet-blog {
 .site-blocks-cover2 > .container > .row {
   height: calc(80vh) !important;
   min-height: 400px !important; }
+
+@media only screen and (max-width: 767px) {
+  .blog-entry {
+    text-align: center; }
+  .blog-entry-text {
+    padding-left: 10px; }
+  .blog-img-head {
+    margin-right: 0 !important; }
+  .blog-img-head img {
+    padding-top: 20px; } }
 
 @media only screen and (max-width: 600px) {
   .bg-image-home2 {

@@ -2005,6 +2005,9 @@ figure figcaption {
   bottom: 0;
   z-index: 1000; }
 
+.mb-10 {
+  margin-bottom: 10rem; }
+
 /* SHOW MORE TRIGGER */
 .read-more-state {
   display: none; }
@@ -2340,7 +2343,8 @@ h2.vet-blog {
 
 .title-text {
   color: #0f9aff;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-transform: uppercase; }
 
 .title-text p {
   margin-left: 5px; }
@@ -2368,5 +2372,8 @@ h2.vet-blog {
 @media only screen and (max-width: 400px) {
   .post-p {
     font-size: 16px !important;
-    color: #0f9aff !important;
-    font-weight: bold !important; } }
+    color: #0f9aff !important; }
+  .title-text h1 {
+    font-size: 2rem !important; }
+  h2.vet-blog {
+    font-size: 5rem; } }

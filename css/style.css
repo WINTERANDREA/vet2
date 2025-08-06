@@ -3182,3 +3182,7 @@ h2.vet-blog {
     font-size: 5rem;
   }
 }
+
+#summerHoursModal .modal-content {
+  border-radius: 1.25rem; /* 20 px */
+}

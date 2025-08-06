@@ -86,6 +86,43 @@
   </div>
 
   <div class="site-wrap">
+
+    <!-- MODAL ORARIO ESTIVO 2025 -->
+    <div class="modal fade" id="summerHoursModal" tabindex="-1"
+        aria-labelledby="summerHoursLabel" aria-hidden="true">
+      <div
+  class="modal-dialog modal-dialog-centered modal-dialog-scrollable
+         modal-fullscreen-sm-down w-100">
+        <div class="modal-content shadow-lg border-0 rounded-lg">
+          <div class="modal-header bg-primary2 text-white">
+            <h5 class="modal-title" id="summerHoursLabel">Orario Estivo 2025</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Chiudi">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <p class="mb-2">
+              Nel mese di <strong>agosto</strong> si riceve per appuntamento
+              <strong>solo il mattino</strong> dalle <strong>9:30</strong> alle <strong>12:00</strong>.<br>
+              Il sabato resterà <strong>chiuso</strong>.
+            </p>
+
+            <hr class="my-3">
+
+            <h6 class="text-primary mb-2">Chiusura Ambulatorio</h6>
+            <ul class="pl-3 mb-3">
+              <li>11 – 17 agosto 2025</li>
+              <li>08 – 15 settembre 2025</li>
+            </ul>
+
+            <p class="font-italic text-center mb-0">Buone vacanze a tutti!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
 
@@ -1332,6 +1369,22 @@
   <script src="js/overflow.js"></script>
 
   <script src="js/main.js"></script>
+
+  <script>
+    jQuery(function ($) {
+    const today   = new Date();
+    const deadEnd = new Date('2025-09-16T00:00:00');   // giorno dopo l’ultima chiusura
+
+    if (today < deadEnd && !localStorage.getItem('avpSummerHours2025Dismissed')) {
+        $('#summerHoursModal').modal('show');
+      }
+
+      $('#summerHoursModal').on('hidden.bs.modal', function () {
+        // non farlo più rivedere in questa finestra del browser
+        localStorage.setItem('avpSummerHours2025Dismissed', 'true');
+      });
+    });
+  </script>
 </body>
 
 </html>

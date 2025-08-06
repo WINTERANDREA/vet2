@@ -3,6 +3,6 @@
 /scss/              # Your SASS sources
 /package-lock.json
 /package.json
-/single.html        # old landing page
+single.html
 /images/home/old/
 /images/scatti_pelosi/old/

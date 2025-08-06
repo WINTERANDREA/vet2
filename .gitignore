@@ -1,8 +1,8 @@
-node_modules
-prepros-6.config
-scss
-package-lock.json
-package.json
-/single.html
-images/home/old
-images/scatti_pelosi/old
+/node_modules/
+/prepros-6.config   # Prepros config file
+/scss/              # Your SASS sources
+/package-lock.json
+/package.json
+/single.html        # old landing page
+/images/home/old/
+/images/scatti_pelosi/old/

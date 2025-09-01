@@ -122,6 +122,72 @@
       </div>
     </div>
 
+    <!-- MODAL AVVISO CHIUSURA STUDIO -->
+    <div class="modal fade" id="closureNoticeModal" tabindex="-1"
+        aria-labelledby="closureNoticeLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content shadow-lg border-0 rounded-lg">
+          <div class="modal-header bg-primary2 text-white">
+            <h5 class="modal-title" id="closureNoticeLabel">Avviso Importante</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Chiudi">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="row">
+              <!-- Immagine - desktop a sinistra, mobile sopra -->
+              <div class="col-12 col-lg-4 text-center mb-4 mb-md-0">
+                <img src="images/home/lauretta.jpg" alt="Dott.ssa Laura Muggiani" class="img-fluid rounded-circle" style="max-width: 200px;">
+              </div>
+              
+              <!-- Testo - desktop a destra, mobile sotto -->
+              <div class="col-12 col-lg-8">
+                <div class="text-left">
+                  <p class="mb-3">Carissimi,</p>
+                  
+                  <p class="mb-3">
+                    Dopo <strong>40 anni</strong> di attività ambulatoriale, <strong>30</strong> dei quali trascorsi a Pero, 
+                    ho deciso di <strong>chiudere lo studio a fine dicembre</strong> di quest'anno.
+                  </p>
+                  
+                  <p class="mb-3">
+                    Per chi vorrà continuare il percorso di salute dei suoi animali con me, 
+                    <strong>continuerò la professione visitando a domicilio</strong>, verrò io a casa vostra, 
+                    con le stesse tariffe.
+                  </p>
+                  
+                  <p class="mb-3">
+                    La modalità sarà sempre la stessa: <strong>su appuntamento</strong> telefonando al numero
+                  </p>
+                  
+                  <div class="text-center mb-3">
+                    <h4 class="text-primary">
+                      <a href="tel:3201676560" class="text-decoration-none">320 1676560</a>
+                    </h4>
+                  </div>
+                  
+                  <p class="mb-3">
+                    Ringrazio tutti per l'affetto che mi avete dimostrato in questi anni, 
+                    sperando di vedervi ancora.
+                  </p>
+                  
+                  <p class="mb-3"><strong>Un abbraccio</strong></p>
+                  <p class="mb-3"><strong>Laura Muggiani</strong></p>
+                  
+                  <hr class="my-3">
+                  
+                  <p class="text-right font-italic mb-0">
+                    <small>Pero, 27/08/25</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
@@ -1372,16 +1438,33 @@
 
   <script>
     jQuery(function ($) {
-    const today   = new Date();
-    const deadEnd = new Date('2025-09-16T00:00:00');   // giorno dopo l’ultima chiusura
+      const today = new Date();
+      const summerDeadEnd = new Date('2025-09-16T00:00:00');   // giorno dopo l'ultima chiusura estiva
 
-    if (today < deadEnd && !localStorage.getItem('avpSummerHours2025Dismissed')) {
+      // Mostra popup orario estivo (fino al 16 settembre)
+      if (today < summerDeadEnd && !localStorage.getItem('avpSummerHours2025Dismissed')) {
         $('#summerHoursModal').modal('show');
+        
+        // Quando si chiude il popup estivo, mostra quello di chiusura se non è già stato visto
+        $('#summerHoursModal').on('hidden.bs.modal', function () {
+          localStorage.setItem('avpSummerHours2025Dismissed', 'true');
+          
+          // Mostra il popup di chiusura dopo una breve pausa
+          setTimeout(function() {
+            if (!localStorage.getItem('avpClosureNotice2025Dismissed')) {
+              $('#closureNoticeModal').modal('show');
+            }
+          }, 500);
+        });
+      }
+      // Se il periodo estivo è finito, mostra solo quello di chiusura
+      else if (!localStorage.getItem('avpClosureNotice2025Dismissed')) {
+        $('#closureNoticeModal').modal('show');
       }
 
-      $('#summerHoursModal').on('hidden.bs.modal', function () {
-        // non farlo più rivedere in questa finestra del browser
-        localStorage.setItem('avpSummerHours2025Dismissed', 'true');
+      // Handler per popup avviso chiusura
+      $('#closureNoticeModal').on('hidden.bs.modal', function () {
+        localStorage.setItem('avpClosureNotice2025Dismissed', 'true');
       });
     });
   </script>

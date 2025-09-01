@@ -112,7 +112,6 @@
 
             <h6 class="text-primary mb-2">Chiusura Ambulatorio</h6>
             <ul class="pl-3 mb-3">
-              <li>11 – 17 agosto 2025</li>
               <li>08 – 15 settembre 2025</li>
             </ul>
 
@@ -1442,29 +1441,29 @@
       const summerDeadEnd = new Date('2025-09-16T00:00:00');   // giorno dopo l'ultima chiusura estiva
 
       // Mostra popup orario estivo (fino al 16 settembre)
-      if (today < summerDeadEnd && !localStorage.getItem('avpSummerHours2025Dismissed')) {
+      if (today < summerDeadEnd && !sessionStorage.getItem('avpSummerHours2025Dismissed')) {
         $('#summerHoursModal').modal('show');
         
         // Quando si chiude il popup estivo, mostra quello di chiusura se non è già stato visto
         $('#summerHoursModal').on('hidden.bs.modal', function () {
-          localStorage.setItem('avpSummerHours2025Dismissed', 'true');
+          sessionStorage.setItem('avpSummerHours2025Dismissed', 'true');
           
           // Mostra il popup di chiusura dopo una breve pausa
           setTimeout(function() {
-            if (!localStorage.getItem('avpClosureNotice2025Dismissed')) {
+            if (!sessionStorage.getItem('avpClosureNotice2025Dismissed')) {
               $('#closureNoticeModal').modal('show');
             }
           }, 500);
         });
       }
       // Se il periodo estivo è finito, mostra solo quello di chiusura
-      else if (!localStorage.getItem('avpClosureNotice2025Dismissed')) {
+      else if (!sessionStorage.getItem('avpClosureNotice2025Dismissed')) {
         $('#closureNoticeModal').modal('show');
       }
 
       // Handler per popup avviso chiusura
       $('#closureNoticeModal').on('hidden.bs.modal', function () {
-        localStorage.setItem('avpClosureNotice2025Dismissed', 'true');
+        sessionStorage.setItem('avpClosureNotice2025Dismissed', 'true');
       });
     });
   </script>
